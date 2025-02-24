@@ -1,0 +1,8 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: cluster-resource-write
+rules:
+- apiGroups: [""]
+  resources: ["services", "pods", "deployments"]
+  verbs: ["create", "update", "patch"] 
